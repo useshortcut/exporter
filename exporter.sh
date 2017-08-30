@@ -11,12 +11,12 @@ echo "Saving all Epics to data/epics.json"
 curl -X GET \
   -H "Content-Type: application/json" \
   -L "https://api.clubhouse.io/api/beta/epics?token=$CLUBHOUSE_API_TOKEN" > data/epics.json 2>/dev/null
-  
+
 echo "Saving all Files to data/files.json"
 curl -X GET \
   -H "Content-Type: application/json" \
   -L "https://api.clubhouse.io/api/beta/files?token=$CLUBHOUSE_API_TOKEN" > data/files.json 2>/dev/null
-  
+
 echo "Saving all Labels to data/labels.json"
 curl -X GET \
   -H "Content-Type: application/json" \
@@ -26,12 +26,12 @@ echo "Saving all Linked Files to data/linkedfiles.json"
 curl -X GET \
   -H "Content-Type: application/json" \
   -L "https://api.clubhouse.io/api/beta/linked-files?token=$CLUBHOUSE_API_TOKEN" > data/linkedfiles.json 2>/dev/null
-  
+
 echo "Saving all Members to data/members.json"
 curl -X GET \
   -H "Content-Type: application/json" \
   -L "https://api.clubhouse.io/api/beta/members?token=$CLUBHOUSE_API_TOKEN" > data/members.json 2>/dev/null
-  
+
 echo "Saving all Milestones to data/milestones.json"
 curl -X GET \
   -H "Content-Type: application/json" \
@@ -60,11 +60,11 @@ curl -X POST -H "Content-Type: application/json" -d '{ "story_type": "chore" }' 
   -L "https://api.clubhouse.io/api/beta/stories/search?token=$CLUBHOUSE_API_TOKEN" > data/stories.chores.json 2>/dev/null
 
 echo "Saving all Story-Links to data/storylinks.json"
-curl -X POST -H "Content-Type: application/json" -d '{ "story_type": "chore" }' \
+curl -X GET -H "Content-Type: application/json" \
    -L "https://api.clubhouse.io/api/beta/story-links?token=$CLUBHOUSE_API_TOKEN" > data/storylinks.json 2>/dev/null
 
 echo "Saving all Teams to data/teams.json"
-curl -X POST -H "Content-Type: application/json" -d '{ "story_type": "chore" }' \
+curl -X GET -H "Content-Type: application/json" \
   -L "https://api.clubhouse.io/api/beta/teams?token=$CLUBHOUSE_API_TOKEN" > data/teams.json 2>/dev/null
 
 echo "Saving Workflow states to data/workflows.json"
