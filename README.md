@@ -7,7 +7,7 @@ This shell script will export all of your Clubhouse organization data to JSON fi
 You'll need a Clubhouse API token defined as an environment variable (see below). If you don't have a token already, you can create one by navigating to Settings > My Account > API Tokens.
 
 ```sh
-$ CLUBHOUSE_API_TOKEN="YOUR API TOKEN HERE"
+$ export CLUBHOUSE_API_TOKEN="YOUR API TOKEN HERE"
 $ ./exporter.sh
 > Saving all users to data/users.json
 > Saving all projects to data/projects.json
