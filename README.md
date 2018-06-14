@@ -19,3 +19,17 @@ $ ./exporter.sh
 > Saving all chores to data/story.chores.json
 > Done!
 ```
+
+## Development
+
+Install shellcheck
+
+```shell
+brew install shellcheck
+```
+
+And run the linter
+
+```shell
+make lint
+```
