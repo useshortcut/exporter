@@ -48,15 +48,15 @@ curl -X GET \
   -L "https://api.clubhouse.io/api/beta/projects?token=$CLUBHOUSE_API_TOKEN" > data/repositories.json 2>/dev/null
 
 echo "Saving all Feature Stories to data/stories.features.json"
-curl -X POST -H "Content-Type: application/json" -d '{ "story_type": "feature" }' \
+curl -X POST -H "Content-Type: application/json" -d "{ \"story_type\": \"feature\" }" \
   -L "https://api.clubhouse.io/api/beta/stories/search?token=$CLUBHOUSE_API_TOKEN" > data/stories.features.json 2>/dev/null
 
 echo "Saving all Bug Stories to data/stories.bugs.json"
-curl -X POST -H "Content-Type: application/json" -d '{ "story_type": "bug" }' \
+curl -X POST -H "Content-Type: application/json" -d "{ \"story_type\": \"bug\" }" \
   -L "https://api.clubhouse.io/api/beta/stories/search?token=$CLUBHOUSE_API_TOKEN" > data/stories.bugs.json 2>/dev/null
 
 echo "Saving all Chore Stories to data/stories.chores.json"
-curl -X POST -H "Content-Type: application/json" -d '{ "story_type": "chore" }' \
+curl -X POST -H "Content-Type: application/json" -d "{ \"story_type\": \"chore\" }" \
   -L "https://api.clubhouse.io/api/beta/stories/search?token=$CLUBHOUSE_API_TOKEN" > data/stories.chores.json 2>/dev/null
 
 echo "Saving all Story-Links to data/storylinks.json"
