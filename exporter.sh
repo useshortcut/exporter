@@ -45,7 +45,7 @@ curl -X GET \
 echo "Saving all Repositories to data/repositories.json"
 curl -X GET \
   -H "Content-Type: application/json" \
-  -L "https://api.clubhouse.io/api/beta/projects?token=$CLUBHOUSE_API_TOKEN" > data/repositories.json 2>/dev/null
+  -L "https://api.clubhouse.io/api/beta/repositories?token=$CLUBHOUSE_API_TOKEN" > data/repositories.json 2>/dev/null
 
 echo "Saving all Feature Stories to data/stories.features.json"
 curl -X POST -H "Content-Type: application/json" -d "{ \"story_type\": \"feature\" }" \
