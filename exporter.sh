@@ -17,6 +17,11 @@ curl -X GET \
   -H "Content-Type: application/json" \
   -L "https://api.clubhouse.io/api/beta/files?token=$CLUBHOUSE_API_TOKEN" > data/files.json 2>/dev/null
 
+echo "Saving all Iterations to data/iterations.json"
+curl -X GET \
+  -H "Content-Type: application/json" \
+  -L "https://api.clubhouse.io/api/beta/iterations?token=$CLUBHOUSE_API_TOKEN" > data/iterations.json 2>/dev/null
+
 echo "Saving all Labels to data/labels.json"
 curl -X GET \
   -H "Content-Type: application/json" \
