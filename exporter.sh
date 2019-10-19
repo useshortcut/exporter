@@ -64,10 +64,6 @@ echo "Saving all Chore Stories to data/stories.chores.json"
 curl -X POST -H "Content-Type: application/json" -d "{ \"story_type\": \"chore\" }" \
   -L "https://api.clubhouse.io/api/v3/stories/search?token=$CLUBHOUSE_API_TOKEN" > data/stories.chores.json 2>/dev/null
 
-echo "Saving all Story-Links to data/storylinks.json"
-curl -X GET -H "Content-Type: application/json" \
-   -L "https://api.clubhouse.io/api/v3/story-links?token=$CLUBHOUSE_API_TOKEN" > data/storylinks.json 2>/dev/null
-
 echo "Saving all Teams to data/teams.json"
 curl -X GET -H "Content-Type: application/json" \
   -L "https://api.clubhouse.io/api/v3/teams?token=$CLUBHOUSE_API_TOKEN" > data/teams.json 2>/dev/null
