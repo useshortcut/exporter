@@ -44,11 +44,11 @@ curl -X GET \
      -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
      -L "https://api.app.shortcut.com/api/v3/members" > data/members.json 2>/dev/null
 
-echo "Saving all Milestones to data/milestones.json"
+echo "Saving all Objectives to data/objectives.json"
 curl -X GET \
      -H "Content-Type: application/json" \
      -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
-     -L "https://api.app.shortcut.com/api/v3/milestones" > data/milestones.json 2>/dev/null
+     -L "https://api.app.shortcut.com/api/v3/objectives" > data/objectives.json 2>/dev/null
 
 echo "Saving all Projects to data/projects.json"
 curl -X GET \
