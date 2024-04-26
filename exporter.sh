@@ -92,6 +92,12 @@ curl -X POST \
      -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
      -L "https://api.app.shortcut.com/api/v3/stories/search" > data/stories.chores.json 2>/dev/null
 
+echo "Saving all Entity Templates to data/entity-templates.json"
+curl -X GET \
+     -H "Content-Type: application/json" \
+     -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+     -L "https://api.app.shortcut.com/api/v3/entity-templates" > data/stories.chores.json 2>/dev/null
+
 echo "Saving all Teams to data/teams.json"
 curl -X GET \
      -H "Content-Type: application/json" \
