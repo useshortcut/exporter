@@ -32,6 +32,12 @@ curl -X GET \
      -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
      -L "https://api.app.shortcut.com/api/v3/labels" > data/labels.json 2>/dev/null
 
+echo "Saving all Custom Fields to data/custom-fields.json"
+curl -X GET \
+     -H "Content-Type: application/json" \
+     -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+     -L "https://api.app.shortcut.com/api/v3/custom-fields" > data/labels.json 2>/dev/null
+
 echo "Saving all Linked Files to data/linkedfiles.json"
 curl -X GET \
      -H "Content-Type: application/json" \
