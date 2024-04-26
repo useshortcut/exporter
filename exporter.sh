@@ -44,6 +44,12 @@ curl -X GET \
      -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
      -L "https://api.app.shortcut.com/api/v3/members" > data/members.json 2>/dev/null
 
+echo "Saving all Groups (a.k.a. Teams) to data/groups.json"
+curl -X GET \
+     -H "Content-Type: application/json" \
+     -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+     -L "https://api.app.shortcut.com/api/v3/groups" > data/members.json 2>/dev/null
+
 echo "Saving all Objectives to data/objectives.json"
 curl -X GET \
      -H "Content-Type: application/json" \
