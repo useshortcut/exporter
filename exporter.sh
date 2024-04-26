@@ -86,7 +86,13 @@ curl -X GET \
      -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
      -L "https://api.app.shortcut.com/api/v3/teams" > data/teams.json 2>/dev/null
 
-echo "Saving Workflow states to data/workflows.json"
+echo "Saving Story Workflows and their states to data/workflows.json"
+curl -X GET \
+     -H "Content-Type: application/json" \
+     -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+     -L "https://api.app.shortcut.com/api/v3/workflows" > data/workflow.json 2>/dev/null
+
+echo "Saving the Epic Workflow and its states to data/epic-workflow.json"
 curl -X GET \
      -H "Content-Type: application/json" \
      -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
