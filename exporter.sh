@@ -1,5 +1,16 @@
 #!/bin/sh
 
+APITEST=$(curl --fail -s -X GET \
+               -H 'Content-Type: application/json' \
+               -H "Shortcut-Token: $SHORTCUT_API_TOKEN" \
+               -L "https://api.app.shortcut.com/api/v3/member")
+
+if [ ! "$APITEST" ]
+then
+    echo "[Error] Set the SHORTCUT_API_TOKEN environment variable to a valid Shortcut API token, then run ./exporter.sh again."
+    exit 1
+fi
+
 export DATADIR=./data
 mkdir -p "$DATADIR"
 

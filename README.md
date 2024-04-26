@@ -4,11 +4,17 @@ This shell script will export all of your Shortcut organization data to JSON fil
 
 ## Instructions
 
-You'll need a Shortcut API token defined as an environment variable (see below). If you don't have a token already, you can create one by navigating to Settings > My Account > API Tokens.
+Download the latest version of this exporter:
 
-```sh
-$ export SHORTCUT_API_TOKEN="YOUR API TOKEN HERE"
-$ ./exporter.sh
+```shell
+curl -L -o "exporter.sh" "https://github.com/useshortcut/exporter/raw/main/exporter.sh"
+chmod u+x ./exporter.sh
+```
+
+Then you'll need a Shortcut API token defined as an environment variable (see below). If you don't have a token already, you can create one by navigating to Settings > My Account > API Tokens.
+
+``` shell
+SHORTCUT_API_TOKEN="YOUR API TOKEN HERE" ./exporter.sh
 ```
 
 ## Development
